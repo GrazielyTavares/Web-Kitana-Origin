@@ -102,19 +102,31 @@
     width: 250px;
 }
 
-/* Section do robo */
-.section-container {
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    gap: 20px; 
-    padding: 20px; 
+/* Container principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
     background: linear-gradient(90deg, #1D1D1D 0%, #4a4da8 100%);
+}
+
+/* Section contendo o projeto e o carrossel */
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10rem;
+}
+
+#titulo_proj{
+    width: 200px;
 }
 
 /* Section do robo */
 .projeto-robo {
-    width: 40%; 
+    width: 40%;
     padding: 20px;
     border-radius: 10px;
 }
@@ -152,11 +164,11 @@
 
 /* Carrossel de imagens */
 .carrosel-imagens {
+    margin-top: 5%;
     border-radius: 20px;
     box-shadow: 10px 10px 50px 0px var(--color-roxo-claro);
     background: transparent;
-    margin-left: 10%;
-    width: 25%; /* Ajuste conforme necessário */
+    width: 25%;
     padding: 20px;
 }
 
@@ -193,99 +205,91 @@
     scroll-snap-align: start;
 }
 
-/* Performance */ 
-.perf{
-    
+/* Performance */
+.perf {
+    text-align: center;
+    margin-top: 40px;
 }
 
-#img1{
-    margin-top: 10%;
-    margin-left: 55%;
+#img1 {
     width: 250px;
+    margin-bottom: 20px;
 }
 
-/* Grupo de cards*/
-.card-group{
-    display: inline-block;
-    align-items: center; 
-    justify-content: center; 
+/* Grupo de cards */
+.card-group {
+    display: flex;
+    justify-content: center;
+    gap: 10rem; 
 }
 
 .card {
-  width: 300px;
-  height: 200px;
-  perspective: 1000px;
-  display: inline-block;
+    width: 300px;
+    height: 320px;
+    perspective: 1000px;
+    display: inline-block;
 }
 
 .card-inner {
-  margin-top: 5%;
-  width: 200px;
-  height: 250px;
-  margin-left: 45%;
-  
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.999s;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
 }
 
 .card:hover .card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .card-front,
 .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
 
 .card-front {
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  justify-content: center;
-  font-size: 24px;
-  transform: rotateY(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
 }
 
 .card-back {
-  background: linear-gradient(90deg, #1D1D1D 0%,#4a4da8 100% );;
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  justify-content: center;
-  font-size: 24px;
-  transform: rotateY(180deg);
-  border: 1px solid var(--color-white);
-}
-.card-back p{
-  color: var(--color-white);
+    background: linear-gradient(90deg, #1D1D1D 0%, #4a4da8 100%);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+    border: 1px solid var(--color-white);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-  .card1 .card-front{
-    margin-left: 10%;
-    width: 210px;
+.card-back p {
+    color: var(--color-white);
+    font-size: medium;
+}
+
+.card1 .card-front {
     background-image: url('../img/performance_rapido.png');
     background-size: cover;
-    
-  }
+}
 
-  .card2 .card-front{
-    margin-left: 50%;
+.card2 .card-front {
     background-image: url('../img/performance_resistente.png');
     background-size: cover;
-  }
+}
 
-  .card3 .card-front{
-    margin-left: 90%;
-    width: 250px;
+.card3 .card-front {
     background-image: url('../img/performance_ofensivo.png');
     background-size: cover;
-  }
-  
+}
 
 
 
