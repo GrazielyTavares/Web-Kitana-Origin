@@ -1,0 +1,306 @@
+:root {
+    --color-roxo: #2F305A;
+    --color-roxo-claro: #7068DE;
+    --color-roxo-muito: #ada7ff;
+    --color-cinza: #2E2E2E;
+    --color-borda:#8d8d8d;
+    --color-white: #e9e8e8;
+    --color-cinzaEscuro: #1D1D1D;
+    --color-cinza2: #1a1919;
+    --font-body: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0 0 0 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--color-cinza);
+}
+
+.fiap{
+    background-color: var(--color-cinza);
+    width: auto;
+}
+
+.fiap h3{
+    font-size: smaller;
+    color: var(--color-white);
+    margin-left: 50%; 
+}
+
+
+/* Barra de Navegação */
+.navegador{
+    display: flexbox;
+    height: 45px;
+    background-color: var(--color-cinzaEscuro);
+    
+}
+
+.navegador ul{
+    text-align: center;
+    
+}
+.navegador ul li{
+    padding: 0px 3% 0px 0px; 
+    display: inline-block;
+}
+
+.navegador ul li a{
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: medium;
+}
+
+.navegador .img1{ 
+    padding: 0.6% 0 0 0;
+    margin-left: 5%;
+    width: 20px;
+    height: 20px;
+}
+
+/* Inicio apresentação robô */
+.robo{
+    background-color: var(--color-cinza2);
+    height: 900px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.logo img{
+    margin-top: 5%;
+}
+
+.logo-titulo{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    
+}
+
+.logo-titulo h2{
+    margin-top: 5%;
+    font-size: medium;
+    color: var(--color-white);
+    text-align: center;
+    width: 70%;
+}
+
+#logo-nome{
+    width: 500px;
+}
+
+#logo-projeto{
+    width: 250px;
+}
+
+/* Section do robo */
+.section-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 20px; 
+    background: linear-gradient(90deg, #1D1D1D 0%, #4a4da8 100%);
+}
+
+/* Section do robo */
+.projeto-robo {
+    width: 40%; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#titulo_proj {
+    margin-top: 5%;
+    margin-left: 8%;
+    width: 15%;
+    height: 5%;
+}
+
+.projeto-robo h3 {
+    color: var(--color-white);
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.projeto-robo p {
+    color: var(--color-borda);
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.projeto-robo button {
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 10%;
+    background: linear-gradient(90deg, #7068DE 0%, #61A9D6 100%);
+    color: var(--color-white);
+    font-size: medium;
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: none;
+}
+
+/* Carrossel de imagens */
+.carrosel-imagens {
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px 0px var(--color-roxo-claro);
+    background: transparent;
+    margin-left: 10%;
+    width: 25%; /* Ajuste conforme necessário */
+    padding: 20px;
+}
+
+.carrosel-imagens .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carrosel-imagens .carousel {
+    max-width: 400px;
+    flex: 1;
+}
+
+.carrosel-imagens .carousel .images {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.carrosel-imagens .carousel .images::-webkit-scrollbar {
+    width: 0px;
+    height: 5px;
+    background-color: transparent;
+}
+
+.carrosel-imagens .carousel .images::-webkit-scrollbar-thumb {
+    background-color: var(--color-roxo-muito);
+    border-radius: 2px;
+    scroll-snap-align: start;
+}
+
+/* Performance */ 
+.perf{
+    
+}
+
+#img1{
+    margin-top: 10%;
+    margin-left: 55%;
+    width: 250px;
+}
+
+/* Grupo de cards*/
+.card-group{
+    display: inline-block;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.card-inner {
+  margin-top: 5%;
+  width: 200px;
+  height: 250px;
+  margin-left: 45%;
+  
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background: linear-gradient(90deg, #1D1D1D 0%,#4a4da8 100% );;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+  transform: rotateY(180deg);
+  border: 1px solid var(--color-white);
+}
+.card-back p{
+  color: var(--color-white);
+}
+
+  .card1 .card-front{
+    margin-left: 10%;
+    width: 210px;
+    background-image: url('../img/performance_rapido.png');
+    background-size: cover;
+    
+  }
+
+  .card2 .card-front{
+    margin-left: 50%;
+    background-image: url('../img/performance_resistente.png');
+    background-size: cover;
+  }
+
+  .card3 .card-front{
+    margin-left: 90%;
+    width: 250px;
+    background-image: url('../img/performance_ofensivo.png');
+    background-size: cover;
+  }
+  
+
+
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.logo-kitana{
+    animation: fadeIn 5s ease-out; 
+}
