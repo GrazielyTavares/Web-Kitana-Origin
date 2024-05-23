@@ -23,6 +23,11 @@
     font-family: var(--font-body);
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 .fiap{
     background-color: var(--color-cinza);
     width: auto;
