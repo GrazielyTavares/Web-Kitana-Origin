@@ -120,10 +120,6 @@
     gap: 10rem;
 }
 
-#titulo_proj{
-    width: 200px;
-}
-
 /* Section do robo */
 .projeto-robo {
     width: 40%;
@@ -134,7 +130,7 @@
 #titulo_proj {
     margin-top: 5%;
     margin-left: 8%;
-    width: 15%;
+    width: 35%;
     height: 5%;
 }
 
@@ -177,10 +173,11 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    max-width: 100%;
 }
 
 .carrosel-imagens .carousel {
-    max-width: 400px;
+    max-width: 250px;
     flex: 1;
 }
 
@@ -220,7 +217,8 @@
 .card-group {
     display: flex;
     justify-content: center;
-    gap: 10rem; 
+    gap: 2rem;
+    max-width: 100%; 
 }
 
 .card {
@@ -291,6 +289,103 @@
     background-size: cover;
 }
 
+/*Documentos*/
+.documentos{
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #1D1D1D 0%, #279296 100%);
+    padding: 20px;
+}
+
+.docs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+    max-width: 400px;
+}
+
+.docs img{
+    width: 100%;
+    max-width: 250px;
+}
+
+.docs h3{
+    margin-top: 20px;
+    color: var(--color-white);
+    font-size: x-large;
+}
+
+.docs p{
+    color: var(--color-borda);
+    margin-top: 5%;
+    max-width: 400px;
+}
+
+.docs button{
+    width: 15rem;
+    font-weight: bold;
+    margin-top: 10%;
+    background: linear-gradient(90deg, #7068DE 0%, #61A9D6 100%);
+    color: var(--color-white);
+    font-size: medium;
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: none;
+    transition: 0.7s;
+}
+
+.img-docs img{
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 20px;
+}
+
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-cinza2);
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.footer h2 {
+    font-size: 1rem;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.footer img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contato img {
+    width: 30px;
+}
+
 
 
 /* Animação */
@@ -307,4 +402,18 @@
 
 .logo-kitana{
     animation: fadeIn 5s ease-out; 
+}
+
+@media (max-width:768px){
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer img {
+        margin-top: 10px;
+    }
+
+    .contato {
+        flex-direction: row;
+    }
 }
