@@ -1,6 +1,6 @@
 # Robô Kitana - Projeto Robocop
 
- ![Kitana Logo](./img/kitana-logo-preta)
+ ![Kitana Logo](./img/kitana-logo-preta.png)
 
 ## Descrição do Projeto
 
