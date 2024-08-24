@@ -30,7 +30,7 @@ Toda a documentação do projeto está disponível na plataforma GitHub. A docum
 - `css/`: Arquivos de estilo CSS.
 - `js/`: Arquivos JavaScript.
 - `docs/`: Documentação do projeto.
-- `index.html`: Página principal do site do projeto.
+- `view`: Pasta que contém o arquivo principal do site do projeto.
 
 ## Como Contribuir
 
