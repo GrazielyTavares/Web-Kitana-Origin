@@ -396,6 +396,70 @@ html{
 }
 
 
+/* parte do card da animação da Arma */
+/* .loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background: url('imagem1.png') no-repeat center center; /* Imagem inicial */
+    /* background-size: cover;
+    animation: transition 4s infinite ease-in-out;
+  }
+  
+  @keyframes transition {
+    0% {
+      background-image: url('imagem1.png'); /* Imagem inicial */
+    /* }
+    50% {
+      background-image: url('imagem2.png'); /* Imagem final */
+    /* }
+    100% {
+      background-image: url('imagem1.png'); /* Retorna à imagem inicial */
+    /* }
+  } */ 
+
+
+
+
+
+
+  /* cards do video */
+  /* Adiciona uma classe para o vídeo */
+/* .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  } */
+  
+  /* Faz o vídeo aparecer quando o card é hoverado */
+  /* .card:hover .video {
+    opacity: 1;
+  } */
+  
+  /* Outros estilos */
+  /* .card {
+    position: relative; Certifica-se de que o vídeo se posicione corretamente dentro do card */
+    /* width: 350px;
+    height: 225px;
+    background: rgba(114,113,114);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0px 0px 1px black;
+    transition: all .2s ease-in;
+  }
+   */
+  /* Restante do CSS existente... */
+  
+
+
 
 /* Animação */
 @keyframes fadeIn {
