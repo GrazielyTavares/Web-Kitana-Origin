@@ -324,43 +324,37 @@ html{
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
   }
   
-  /* Estilo do botão do acordeão quando aberto */
   .accordion-button:not(.collapsed) {
-    background-color: #d1aaf8; /* Cor de fundo quando aberto */
+    background-color: #d1aaf8;
     color: #fff;
   }
   
-  /* Estilo do botão ao passar o mouse */
   .accordion-button:hover {
-    background-color: #b47de5; /* Cor de fundo ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(169, 99, 234, 0.7); /* Sombra brilhante lilás ao passar o mouse */
-    transform: translateY(-5px); /* Animação flutuante ao passar o mouse */
+    background-color: #b47de5; 
+    box-shadow: 0 6px 12px rgba(169, 99, 234, 0.7); 
+    transform: translateY(-5px);
   }
   
-  /* Estilo do corpo do acordeão */
   .accordion-body {
     background-color: #d393e330; 
     color: #5b5b5b; 
     border-radius: 10px; /
     
   }
-  
-  /* Imagens no corpo do acordeão */
+
   .accordion-body img {
     max-width: 100%; 
     border-radius: 5px; 
   }
   
-  /* Estilo do cabeçalho do acordeão */
   .accordion-header {
-    background-color: #6a0dad; /* Cor de fundo roxa */
-    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #6a0dad;
+    border-radius: 10px;
   }
   
-  /* Remove bordas padrão ao abrir o acordeão */
   .accordion-collapse {
-    border-radius: 10px; /* Bordas arredondadas para o corpo do acordeão */
-    overflow: hidden; /* Garante que a borda arredondada seja visível */
+    border-radius: 10px; 
+    overflow: hidden; 
   }
   
 
@@ -509,7 +503,7 @@ html{
     margin-left: 25%;
     width: 300px;
     height: 300px; 
-    background-image: url('../img//base.png'); 
+    background-image: url('../img/robo-ativado-lateral.png'); 
     background-size: cover; 
     background-position: center; 
     border-radius: 10px; 
@@ -538,7 +532,7 @@ html{
     margin-left: 45%;
     width: 300px;
     height: 300px; 
-    background-image: url('../img//arma_Execucao.png'); 
+    background-image: url('../img/robo-desativado.png'); 
     background-size: cover; 
     background-position: center; 
     border-radius: 10px; 
