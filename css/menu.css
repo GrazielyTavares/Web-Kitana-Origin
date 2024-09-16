@@ -12,7 +12,18 @@
     --color-white: #e9e8e8;
     --color-cinzaEscuro: #1D1D1D;
     --color-cinza2: #1a1919;
+    --color-fundo-arma: #34103D;
     --font-body: nunito;
+
+    --color-bg: #EEEDEB;
+  --color-title: #0E1C4E;
+  
+  --color-summary-closed: #6a0dad; /* Cor de fundo roxa */
+  --color-summary-open: #d1aaf8; /* Cor de fundo quando aberto */
+  --color-summary-hover: #b47de5; /* Cor de fundo ao passar o mouse */
+  --color-shadow: rgba(169, 99, 234, 0.7); /* Sombra brilhante lilás */
+  --color-body-bg: #d393e330; /* Cor de fundo do corpo */
+  --color-body-text: #5b5b5b;
 }
 
 * {
@@ -30,7 +41,8 @@ html{
 
 .fiap{
     background-color: var(--color-cinza);
-    width: auto;
+    width: 100%;
+    height: 15px;
 }
 
 .fiap h3{
@@ -43,28 +55,30 @@ html{
 /* Barra de Navegação */
 .navegador{
     display: flexbox;
-    height: 45px;
+    width: 100%;
+    height: 35px;
     background-color: var(--color-cinzaEscuro);
-    
-}
+    align-items: center;
 
-.navegador ul{
+    ul{
     text-align: center;
     
-}
-.navegador ul li{
-    padding: 0px 3% 0px 0px; 
+    }
+    
+    li{
+    padding: 0.5% 3% 0px 0px; 
     display: inline-block;
-}
+    }
 
-.navegador ul li a{
+    a{
     text-decoration: none;
     color: var(--color-white);
-    font-size: medium;
+    font-size: small;
+    }
 }
 
-.navegador .img1{ 
-    padding: 0.6% 0 0 0;
+.img1{ 
+    padding: 0 0 0 0;
     margin-left: 5%;
     width: 20px;
     height: 20px;
@@ -73,7 +87,7 @@ html{
 /* Inicio apresentação robô */
 .robo{
     background-color: var(--color-cinza2);
-    height: 900px;
+    height: 120vh;
 }
 
 .logo {
@@ -81,10 +95,11 @@ html{
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-}
 
-.logo img{
-    margin-top: 5%;
+
+    img{
+        margin-top: 5%;
+    }
 }
 
 .logo-titulo{
@@ -93,37 +108,40 @@ html{
     align-items: center; 
     justify-content: center; 
     
+    h2{
+        margin-top: 5%;
+        font-size: 70%;
+        color: var(--color-white);
+        text-align: center;
+        width: 70%;
+    }
 }
 
-.logo-titulo h2{
-    margin-top: 5%;
-    font-size: medium;
-    color: var(--color-white);
-    text-align: center;
-    width: 70%;
+.logo-kitana{
+    animation: fadeIn 5s ease-out; 
 }
 
 #logo-nome{
-    width: 500px;
+    width: 70%;
 }
 
 #logo-projeto{
-    width: 250px;
+    width: 25%;
 }
 
 /* Container principal */
-.main-container {
+.projeto{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    height: 60rem;
     background: linear-gradient(90deg, #1D1D1D 0%, #4a4da8 100%);
 }
 
 
-.section-container {
+.projeto-section {
     display: flex;
-    justify-content: center;
     align-items: flex-start;
     width: 100%;
     gap: 10rem;
@@ -131,85 +149,45 @@ html{
 
 /* Section do robo */
 .projeto-robo {
-    width: 40%;
+    margin-top: 5%;
+    width: 50%;
     padding: 20px;
     border-radius: 10px;
+
+    h3 {
+        color: var(--color-white);
+        margin-top: 2%;
+        margin-left: 20%;
+    }
+    
+    p {
+        color: var(--color-borda);
+        margin-top: 2%;
+        margin-left: 20%;
+        font-size: 15px;
+    }
+
+    img{
+        margin-top: 5%;
+        margin-left: 18%;
+        width: 30%;
+        height: 5%;
+    }
 }
 
-#titulo_proj {
-    margin-top: 5%;
-    margin-left: 8%;
-    width: 35%;
-    height: 5%;
+/* Carrosel */
+.galeria{
+    margin-top: 8%;
+    width: 350px;
+    height: 350px;
 }
 
-.projeto-robo h3 {
-    color: var(--color-white);
-    margin-top: 2%;
-    margin-left: 10%;
+.carousel img{
+    margin-right: 20%;
+    width: 350px;
+    height: 350px;
 }
 
-.projeto-robo p {
-    color: var(--color-borda);
-    margin-top: 2%;
-    margin-left: 10%;
-}
-
-.projeto-robo button {
-    font-weight: bold;
-    margin-top: 2%;
-    margin-left: 10%;
-    background: linear-gradient(90deg, #7068DE 0%, #61A9D6 100%);
-    color: var(--color-white);
-    font-size: medium;
-    padding: 8px 20px;
-    border-radius: 25px;
-    border: none;
-}
-
-/* Carrossel de imagens */
-.carrosel-imagens {
-    margin-top: 5%;
-    border-radius: 20px;
-    box-shadow: 10px 10px 50px 0px var(--color-roxo-claro);
-    background: transparent;
-    width: 25%;
-    padding: 20px;
-}
-
-.carrosel-imagens .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    max-width: 100%;
-}
-
-.carrosel-imagens .carousel {
-    max-width: 250px;
-    flex: 1;
-}
-
-.carrosel-imagens .carousel .images {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overflow-x: auto;
-    width: 100%;
-    height: 100%;
-}
-
-.carrosel-imagens .carousel .images::-webkit-scrollbar {
-    width: 0px;
-    height: 5px;
-    background-color: transparent;
-}
-
-.carrosel-imagens .carousel .images::-webkit-scrollbar-thumb {
-    background-color: var(--color-roxo-muito);
-    border-radius: 2px;
-    scroll-snap-align: start;
-}
 
 /* Performance */
 .perf {
@@ -223,21 +201,21 @@ html{
 }
 
 /* Grupo de cards */
-.card-group {
+.group {
     display: flex;
     justify-content: center;
     gap: 2rem;
     max-width: 100%; 
 }
 
-.card {
+.carde {
     width: 300px;
     height: 320px;
     perspective: 1000px;
     display: inline-block;
 }
 
-.card-inner {
+.inner {
     width: 100%;
     height: 100%;
     position: relative;
@@ -245,19 +223,19 @@ html{
     transition: transform 0.999s;
 }
 
-.card:hover .card-inner {
+.carde:hover .inner {
     transform: rotateY(180deg);
 }
 
-.card-front,
-.card-back {
+.front,
+.back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
 }
 
-.card-front {
+.front {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -265,7 +243,7 @@ html{
     transform: rotateY(0deg);
 }
 
-.card-back {
+.back {
     background: linear-gradient(90deg, #1D1D1D 0%, #4a4da8 100%);
     color: var(--color-white);
     display: flex;
@@ -278,81 +256,141 @@ html{
     border-radius: 10px;
 }
 
-.card-back p {
+.back p {
     color: var(--color-white);
     font-size: medium;
 }
 
-.card1 .card-front {
+.carde1 .front {
     background-image: url('../img/performance_rapido.png');
     background-size: cover;
 }
 
-.card2 .card-front {
+.carde2 .front {
     background-image: url('../img/performance_resistente.png');
     background-size: cover;
 }
 
-.card3 .card-front {
+.carde3 .front {
     background-image: url('../img/performance_ofensivo.png');
     background-size: cover;
 }
 
-/*Documentos*/
-.documentos{
-    display: flex;
-    align-items: center; 
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 100%;
-    margin: 0 auto;
-    background: linear-gradient(90deg, #1D1D1D 0%, #279296 100%);
-    padding: 20px;
-}
 
-.docs{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    max-width: 400px;
-}
+/*Arma */
 
-.docs img{
+.arma{
     width: 100%;
-    max-width: 250px;
+    height: 40rem;
+    display: flex;
+    background: linear-gradient(90deg, #34103D  0%, #1D1D1D 100%);
 }
 
-.docs h3{
-    margin-top: 20px;
-    color: var(--color-white);
-    font-size: x-large;
-}
-
-.docs p{
-    color: var(--color-borda);
-    margin-top: 5%;
-    max-width: 400px;
-}
-
-.docs button{
-    width: 15rem;
-    font-weight: bold;
+.arma_texto{
     margin-top: 10%;
-    background: linear-gradient(90deg, #7068DE 0%, #61A9D6 100%);
+    margin-left: 15%;
     color: var(--color-white);
-    font-size: medium;
-    padding: 8px 20px;
-    border-radius: 25px;
-    border: none;
-    transition: 0.7s;
+    font-size: 13px;
+    font-weight: bold;
+    
+    img{
+        width: 5%;
+        height: 9%;
+    }
 }
 
-.img-docs img{
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    margin: 20px;
+.lista{
+    margin-top: 10%;
+    margin-left: 6%;
+   
+}
+
+.accordion-item{
+    width: 500px;
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Estilo do botão do acordeão quando fechado */
+.accordion-button {
+    background-color: #e6d1f6; 
+    color: #fff; 
+    border-radius: 90px; 
+    box-shadow: 0 4px 8px rgba(174, 98, 245, 0.5); 
+    border: none; 
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
+  }
+  
+  /* Estilo do botão do acordeão quando aberto */
+  .accordion-button:not(.collapsed) {
+    background-color: #d1aaf8; /* Cor de fundo quando aberto */
+    color: #fff;
+  }
+  
+  /* Estilo do botão ao passar o mouse */
+  .accordion-button:hover {
+    background-color: #b47de5; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(169, 99, 234, 0.7); /* Sombra brilhante lilás ao passar o mouse */
+    transform: translateY(-5px); /* Animação flutuante ao passar o mouse */
+  }
+  
+  /* Estilo do corpo do acordeão */
+  .accordion-body {
+    background-color: #d393e330; 
+    color: #5b5b5b; 
+    border-radius: 10px; /
+    
+  }
+  
+  /* Imagens no corpo do acordeão */
+  .accordion-body img {
+    max-width: 100%; 
+    border-radius: 5px; 
+  }
+  
+  /* Estilo do cabeçalho do acordeão */
+  .accordion-header {
+    background-color: #6a0dad; /* Cor de fundo roxa */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Remove bordas padrão ao abrir o acordeão */
+  .accordion-collapse {
+    border-radius: 10px; /* Bordas arredondadas para o corpo do acordeão */
+    overflow: hidden; /* Garante que a borda arredondada seja visível */
+  }
+  
+
+#titulo_arma{
+    width: 15rem;
+    height: 10%;
+}
+
+.arma_texto h2{
+    margin-top: 3%;
+}
+
+.arma_texto p{
+    font-size: 15px;
+    color: var(--color-borda);
+    margin-top: 3%;
+    width: 80%;
+}
+
+.arma_card{
+    display: flex;
+    height: 30rem;
+    background: linear-gradient(90deg, #34103D  0%, #1D1D1D 100%);
+}
+
+#titulo_exec{
+    margin-top: 14%;
+    margin-left: 13%;
+    width: 13rem;
+    height: 8rem;
 }
 
 
@@ -395,73 +433,6 @@ html{
     width: 30px;
 }
 
-
-/* parte do card da animação da Arma */
-/* .loader {
-    width: 64px;
-    height: 64px;
-    position: relative;
-    background: url('imagem1.png') no-repeat center center; /* Imagem inicial */
-    /* background-size: cover;
-    animation: transition 4s infinite ease-in-out;
-  }
-  
-  @keyframes transition {
-    0% {
-      background-image: url('imagem1.png'); /* Imagem inicial */
-    /* }
-    50% {
-      background-image: url('imagem2.png'); /* Imagem final */
-    /* }
-    100% {
-      background-image: url('imagem1.png'); /* Retorna à imagem inicial */
-    /* }
-  } */ 
-
-
-
-
-
-
-  /* cards do video */
-  /* Adiciona uma classe para o vídeo */
-/* .video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  } */
-  
-  /* Faz o vídeo aparecer quando o card é hoverado */
-  /* .card:hover .video {
-    opacity: 1;
-  } */
-  
-  /* Outros estilos */
-  /* .card {
-    position: relative; Certifica-se de que o vídeo se posicione corretamente dentro do card */
-    /* width: 350px;
-    height: 225px;
-    background: rgba(114,113,114);
-    border-radius: 15px;
-    padding: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    box-shadow: inset 0px 0px 1px black;
-    transition: all .2s ease-in;
-  }
-   */
-  /* Restante do CSS existente... */
-  
-
-
-
-/* Animação */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -473,20 +444,491 @@ html{
     }
 }
 
-.logo-kitana{
-    animation: fadeIn 5s ease-out; 
+/*Arma */
+.alvo{
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    background: linear-gradient(90deg, #1D1D1D  0%, #155456 100%);
 }
 
-@media (max-width:768px){
+.alvo_texto{
+    margin-top: 10%;
+    margin-left: 15%;
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+
+.alvo_texto {
+    img {
+        width: 5%;
+        height: 9%;
+    }
+
+    h2{
+        margin-top: 3%;
+    }
+
+    p{
+        font-size: 15px;
+        color: var(--color-borda);
+        margin-top: 3%;
+        width: 80%;
+    }
+}
+
+#titulo_alvo{
+    width: 15rem;
+    height: 10%;
+}
+
+#alvo_desenho{
+    margin-top: 3%;
+    margin-left: 13%;
+    width: 100%;
+    height: 28rem;
+}
+
+.alvo_card{
+    display: flex;
+    height: 30rem;
+    background: linear-gradient(90deg, #1D1D1D  0%, #155456 100%);
+}
+
+#titulo_exec{
+    margin-top: 14%;
+    margin-left: 13%;
+    width: 13rem;
+    height: 8rem;
+}
+
+.armaAtivada{
+    margin-top: 25%;
+    margin-left: 25%;
+    width: 300px;
+    height: 300px; 
+    background-image: url('../img//base.png'); 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 10px; 
+    transition: background-image 0.3s;  
+}
+
+.loader p{
+    color: var(--color-bg);
+    margin-top: 5%;
+    margin-left: 55%;
+}
+
+.loader2 p{
+    color: var(--color-bg);
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 80%;
+}
+
+.armaAtivada:hover {
+    background-image: url('../img/personagem-kitana.png'); 
+}
+
+.armaDesativada{
+    margin-top: 25%;
+    margin-left: 45%;
+    width: 300px;
+    height: 300px; 
+    background-image: url('../img//arma_Execucao.png'); 
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 10px; 
+    transition: background-image 0.3s; 
+}
+
+.armaDesativada:hover {
+    background-image: url('../img/personagem-kitana.png'); 
+}
+
+@media screen and (width < 1300px){
+    .armaAtivada{
+        margin-top: 35%;
+        margin-left: 35%;
+        width: 200px;
+        height: 200px; 
+    }
+
+    .armaDesativada{
+        margin-top: 35%;
+        margin-left: 45%;
+        width: 200px;
+        height: 200px; 
+    }
+
+    #titulo_exec{
+        width: 200px;
+        height: 100px; 
+    }
+
     .footer {
+        position: absolute;
+        top:205rem;
+        width: 100%;
+        display: flex;
         flex-direction: column;
     }
-
-    .footer img {
-        margin-top: 10px;
-    }
-
-    .contato {
-        flex-direction: row;
-    }
+    
 }
+
+@media screen and (width < 1100px){
+
+    .robo{
+        height:50rem;
+    }
+
+    .projeto-robo {
+        width: 90%;
+
+        h3{
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    
+        img{
+            margin-top: 5%;
+            margin-left: 18%;
+            width: 50%;
+            height: 5%;
+        }
+    }
+
+    .galeria{
+        margin-top: 15%;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .carousel img{
+        margin-right: 20%;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .carde {
+        width: 200px;
+        height: 220px;
+    }
+    
+    .back p {
+        font-size: small;
+    }
+
+   
+    .arma{
+        position: absolute;
+        height: 60rem;
+
+        h2{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .lista{
+        position: absolute;
+        top: 20rem;
+        margin-left: 20%;
+    }
+    
+    .arma_texto{
+        top: 10rem;
+        margin-left: 15%;
+        font-size: 10px;
+        font-weight: bold;
+        
+        img{
+            width: 5%;
+            height: 3%;
+        }
+    }
+
+    #titulo_arma{
+            width: 25%;
+            height: 5%;
+    }
+    
+    .alvo_texto {
+        img {
+            width: 3rem;
+            height: 9%;
+        }
+    
+        h2{
+            margin-top: 3%;
+            font-size: 20px;
+        }
+    
+        p{
+            font-size: 13px;
+            margin-top: 3%;
+            width: 80%;
+        }
+    }
+    
+    #titulo_alvo{
+        width: 15rem;
+        height: 2rem;
+    }
+    
+    #alvo_desenho{
+        margin-top: 10%;
+        margin-left: 13%;
+        width: 100%;
+        height: 25rem;
+    }
+
+    .footer {
+        top:235rem;
+        width: 100%;
+    }
+} 
+
+
+@media screen and (width < 800px){
+    .navegador a{
+        font-size: small;
+    }
+
+    .robo{
+        
+        width: 100%;
+        height:50rem;
+    }
+
+    .logo-kitana{
+        width: 80%;
+        height: 50%;
+    }
+
+    .projeto{
+        padding: 20px;
+        height: 150rem;
+    }
+
+    .projeto-section{
+        margin-right: 15%;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .projeto-robo {
+        margin-top: 20%;
+        h3 {
+            margin-top: 3%;
+            font-size: 18px;
+            width: 90%;
+        }
+        
+        p {
+            margin-top: 3%;
+            font-size: 14px;
+            width: 85%;
+        }
+    
+        img{
+            width: 40%;
+            height: 20%;
+        }
+    }
+
+    .perf {
+        margin-top: 15%;
+    }
+
+    .galeria{
+        margin-top: 0;
+        margin-left: 20%;
+        width: 350px;
+        height: 350px;
+    }
+    
+    .carousel img{
+        margin-right: 20%;
+        width: 350px;
+        height: 350px;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 100%; 
+    }
+    
+    .carde {
+        width: 300px;
+        height: 320px;
+        perspective: 1000px;
+        display: inline-block;
+    }
+
+    .arma{
+        height: 60rem;
+        display: flex;
+    }
+
+    .lista{
+        position: absolute;
+        margin-left: 10%;
+        top: 22rem;
+    }
+
+    .accordion-item{
+        width: 20rem;
+    }
+    
+    .arma_texto{
+        p{
+            font-size: small;
+        }
+        img{
+            width: 5%;
+            height: 3%;
+        }
+    }
+
+    #titulo_arma{
+        width: 15rem;
+        height: 5%;
+    }
+
+    .alvo{
+        flex-direction: column;
+        height: 70rem;
+        
+    }
+
+    #alvo_desenho{
+        position: absolute;
+        top: 220rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .alvo_texto {
+        img {
+            width:2rem;
+            height: 9%;
+        }
+    }
+
+    .alvo_card{
+        flex-direction: column;
+    }
+    
+    #titulo_alvo{
+        width: 15rem;
+        height: 2rem;
+    }
+
+    #titulo_exec{
+        position: absolute;
+        margin-left: 30%;
+        top: 245rem;
+        width: 200px;
+        height: 100px; 
+    }
+    
+    .loader{
+        position: absolute;
+        top:253rem;
+        margin-left: 14%;
+
+        p{
+            width: 50%;
+        }
+    }
+
+    .armaAtivada{
+        width: 250px;
+        height: 250px;
+    }
+
+    .loader2{
+        position: absolute;
+        top:275rem;
+        margin-left: 10%;
+    }
+
+    .armaDesativada{
+        width: 250px;
+        height: 250px;
+    }
+
+    .footer {
+        top:362rem;
+        width: 100%;
+    }
+
+} 
+    
+
+@media screen and (width < 200px){
+
+    .robo{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .logo-kitana{
+        width: 80%;
+        height: 50%;
+    }
+
+    .projeto-robo {
+        h3 {
+            margin-top: 3%;
+            font-size: small;
+            width: 80%;
+        }
+        
+        p {
+            margin-top: 5%;
+            font-size: x-small;
+            width: 80%;
+        }
+    
+        img{
+            width: 80rem;
+            height: 15%;
+        }
+    }
+
+    .alvo_texto{
+        p{
+            font-size: 10px;
+        }
+    }
+
+    
+
+}
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
