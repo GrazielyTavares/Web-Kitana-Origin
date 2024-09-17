@@ -363,16 +363,18 @@ html{
     height: 10%;
 }
 
-.arma_texto h2{
-    margin-top: 3%;
-}
+.arma_texto{
+    p{
+        font-size: 12px;
+        color: var(--color-borda);
+        margin-top: 3%;
+        width: 80%;
+    }
+    h2{
+        font-size: 20px;
+    }
+} 
 
-.arma_texto p{
-    font-size: 15px;
-    color: var(--color-borda);
-    margin-top: 3%;
-    width: 80%;
-}
 
 .arma_card{
     display: flex;
@@ -474,8 +476,8 @@ html{
 }
 
 #titulo_alvo{
-    width: 15rem;
-    height: 10%;
+    width: 20rem;
+    height: 5rem
 }
 
 #alvo_desenho{
@@ -484,63 +486,78 @@ html{
     width: 100%;
     height: 28rem;
 }
-
-.alvo_card{
-    display: flex;
+.alvo_card {
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo"
+        "ativa desativa";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 30rem;
-    background: linear-gradient(90deg, #1D1D1D  0%, #155456 100%);
+    background: linear-gradient(90deg, #1D1D1D 0%, #155456 100%);
 }
 
-#titulo_exec{
+#titulo_exec {
+    grid-area: titulo;
+    align-self: center;
+    justify-self: start;
     margin-top: 14%;
     margin-left: 13%;
     width: 13rem;
     height: 8rem;
 }
 
-.armaAtivada{
-    margin-top: 25%;
-    margin-left: 25%;
+.loader {
+    grid-area: ativa;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 35%;
+
+    p{
+        position: absolute;
+        color: var(--color-bg);
+        margin-left:55%;
+        width: 50%;
+    }
+}
+
+.loader2 {
+    grid-area: desativa;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 5%;
+
+    p{
+        position: absolute;
+        color: var(--color-bg);
+        margin-left:65%;
+        width: 60%;
+    }
+}
+
+.armaAtivada, .armaDesativada {
     width: 300px;
-    height: 300px; 
-    background-image: url('../img/robo-ativado-lateral.png'); 
-    background-size: cover; 
-    background-position: center; 
-    border-radius: 10px; 
-    transition: background-image 0.3s;  
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: background-image 0.3s;
 }
 
-.loader p{
-    color: var(--color-bg);
-    margin-top: 5%;
-    margin-left: 55%;
+.armaAtivada {
+    background-image: url('../img/arma-desativada.png');
 }
 
-.loader2 p{
-    color: var(--color-bg);
-    width: 50%;
-    margin-top: 5%;
-    margin-left: 80%;
+.armaDesativada {
+    background-image: url('../img/arma-ativada.png');
 }
 
 .armaAtivada:hover {
-    background-image: url('../img/personagem-kitana.png'); 
-}
-
-.armaDesativada{
-    margin-top: 25%;
-    margin-left: 45%;
-    width: 300px;
-    height: 300px; 
-    background-image: url('../img/robo-desativado.png'); 
-    background-size: cover; 
-    background-position: center; 
-    border-radius: 10px; 
-    transition: background-image 0.3s; 
+    background-image: url('../img/robo-ativado-lateral.png');
 }
 
 .armaDesativada:hover {
-    background-image: url('../img/personagem-kitana.png'); 
+    background-image: url('../img/robo-desativado.png');
 }
 
 @media screen and (width < 1300px){
@@ -599,7 +616,8 @@ html{
     }
 
     .galeria{
-        margin-top: 15%;
+        margin-right: 4%;
+        margin-top: 10%;
         width: 300px;
         height: 300px;
     }
@@ -638,9 +656,16 @@ html{
     
     .arma_texto{
         top: 10rem;
-        margin-left: 15%;
         font-size: 10px;
         font-weight: bold;
+
+        h2{
+            margin-left: 2%;
+        }
+
+        p{
+            margin-left: 2%;
+        }
         
         img{
             width: 5%;
@@ -672,8 +697,8 @@ html{
     }
     
     #titulo_alvo{
-        width: 15rem;
-        height: 2rem;
+        width: 18rem;
+        height: 5rem;
     }
     
     #alvo_desenho{
@@ -824,8 +849,8 @@ html{
     }
     
     #titulo_alvo{
-        width: 15rem;
-        height: 2rem;
+        width: 18rem;
+        height: 5rem;
     }
 
     #titulo_exec{
