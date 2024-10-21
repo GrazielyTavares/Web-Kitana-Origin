@@ -182,15 +182,15 @@ html{
 
 /* Carrosel */
 .galeria{
-    margin-top: 8%;
-    width: 300px;
-    height: 300px;
+    margin-top: 5%;
+    width: 400px;
+    height: 450px;
     margin-right: 10%;
 }
 
 .carousel img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 450px;
 }
 
 /* Performance */
@@ -395,11 +395,11 @@ html{
 }
 
 .armaAtivada {
-    background-image: url('../img/arma-desativada.png');
+    background-image: url('../img/arma-ativada.png');
 }
 
 .armaDesativada {
-    background-image: url('../img/arma-ativada.png');
+    background-image: url('../img/robo-desativado.png');
 }
 
 .armaAtivada:hover {
@@ -407,7 +407,7 @@ html{
 }
 
 .armaDesativada:hover {
-    background-image: url('../img/robo-desativado.png');
+    background-image: url('../img/robo-desativado-lateral.png');
 }
 
 
@@ -553,52 +553,42 @@ html{
 .equipe{
     height: 52rem;
     background: linear-gradient(90deg, #1D1D1D  0%, #111D3E  100%);
-    display: flex;
 
-    .acao{
-        color: var(--color-bg);
-        margin-top: 20%;
-        margin-left: 10%;
+    .equipe-secoes{
+        display: flex;
 
-        h2{
-            font-size: 25px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #8FD6FF, #8A80FA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .acao{
+            color: var(--color-bg);
+            margin-top: 8%;
+            margin-left: 15%;
+
+            h2{
+                font-size: 25px;
+                margin-left: 65%;
+                font-weight: bold;
+                background: linear-gradient(90deg, #8FD6FF, #8A80FA);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+
+            p{
+                margin-left: 55%;
+                margin-right: 0;
+                width: 70%;
+                margin-top: 3%;
+            }
         }
-
-       h3{
-        margin-top: 3%;
-        font-size: 20px;
-       }
-
-       p{
-        margin-top: 3%;
-        width: 50%;
-       }
     }
-
 }
 
 .cards-time{
-    .card-Web{
-        position: absolute;
-        top: 270rem;
-        margin-left: 50%;
-    }
 
-    .card-Doc{
-        position: absolute;
-        top: 270rem;
-        margin-left: 75%;
-    }
-
-    .card-Rob{
-        position: absolute;
-        top: 288rem;
-        margin-left: 62%;
-    }
+    display: flex;
+    flex-direction: row; /* Mude para linha */
+    gap: 20px; /* Espaço entre os cards */
+    justify-content: center; /* Centraliza os cards no contêiner */
+    margin-top: 5%; 
 
     
     .perfil {
@@ -723,7 +713,7 @@ html{
 
     .form-contato{
         flex-direction: column;
-        margin-left: 15%;
+        margin-left: 20%;
         margin-top: 10%;
 
         h2{
@@ -777,8 +767,8 @@ html{
         color: #1DCAF6;
     }
     .texto-contato{
-        margin-left: 10%;
-        margin-top: 20%;
+        margin-left: 30%;
+        margin-top: 10%;
 
         h2{
             background: linear-gradient(90deg, #1DCAF6, #08B066);
@@ -840,9 +830,6 @@ html{
 }
 
 
-
-
-
 /* Responsivo 110*/
 @media screen and (width < 1300px){
 
@@ -869,30 +856,33 @@ html{
         height: 100px; 
     }
 
-    .cards-time{
-        .card-Web{
-            top: 255rem;
-            
-        }
-    
-        .card-Doc{
-            top: 255rem;
+        
+    .equipe{
+        .equipe-secoes{
+            .acao{
+                color: var(--color-bg);
+                margin-top: 10%;
 
-        }
-    
-        .card-Rob{
-        top: 275rem;
-        }
-    }
+                h2{
+                    margin-left: 25%;
+                }
 
-    
-
-    .footer {
-        position: absolute;
-        top:400rem;
-        width: 100%;
+                p{
+                    margin-left: 15%;
+                
+                }
+            }
+            .cards-time{
+                display: flex;
+                flex-direction: row; /* Mude para linha */
+                gap: 5px; /* Espaço entre os cards */
+                justify-content: center; /* Centraliza os cards no contêiner */
+                margin-top: 5%; 
+            }
+        }
     }
 }
+
 
 @media screen and (width < 1100px){
 
@@ -996,6 +986,44 @@ html{
         height: 25rem;
     }
 
+    .contato-form{
+        height: 65rem;
+        flex-direction: column;
+
+       
+        .texto-contato{
+            margin-top: 15%;
+            
+            h2{
+                margin-left: 35%;
+            }
+            p{
+                width: 40%;
+                margin-left: 30%;
+            }
+            
+            button{
+                margin-left: 10%;
+            }
+        }
+    }
+
+    .contato-form{
+
+        .form-contato{
+            input{
+                width: 35rem;
+            }
+        }
+    }
+
+    .texto-contato{
+        margin-left: 0;
+        h2{
+            margin-left: 5%;
+        }
+    }
+
     
     .equipe{
         height: 40rem;
@@ -1014,68 +1042,33 @@ html{
     }
 
 
-    .cards-time{
-        .card-Web{
-            margin-left: 50%;
-            top: 280rem;
-            
-        }
-    
-        .card-Doc{
-            margin-left: 75%;
-            top: 280rem;
+    .equipe{
+        .equipe-secoes{
+            .acao{
+                color: var(--color-bg);
+                margin-top: 10%;
 
-        }
-    
-        .card-Rob{
-            margin-left: 63%;
-            top: 295rem;
-        }
+                h2{
+                    margin-left: 25%;
+                }
 
-        .perfil{
-            width: 180px;
-            height: 212px;
-
-            .perfil__img{
-                img{
-                    height: 85px;
-                    width: 150px;
+                p{
+                    margin-left: 15%;
+                
                 }
             }
-
-            .perfil__avatar {
-                img{
-                    
-                    width: 80px;
-                    height: 80px;
-                }
-            }
-
-            .perfil__title {
-                margin-top: 74px;
-                font-size: 10px;
-            }
-            .perfil__subtitle {
-                margin-top: 2px;
-                font-size: 8px;
-            }
-
-            .perfil__btn {
-
-                img{
-                    width: 15px;
-                }
+            .cards-time{
+                display: flex;
+                flex-direction: row; /* Mude para linha */
+                gap: 5px; /* Espaço entre os cards */
+                justify-content: center; /* Centraliza os cards no contêiner */
+                margin-top: 5%; 
             }
         }
     }
 
-   
-    .footer {
-        top:400rem;
-        width: 100%;
-    }
-    
-} 
+}
+
 
 
 @media screen and (width < 800px){
@@ -1235,94 +1228,21 @@ html{
         
     }
     
-
-    
-
-    .card-Web{
-        margin-left: 40%;
-        top:420rem;
+    .acao{
+        h2{
+            margin-top: 15%;
+        }
     }
-    .card-Doc{
-        margin-left: 40%;
-        top:440rem;
-    }
-    .card-Rob{
-        margin-left:40%;
-        top:460rem;
-    }
-    
-
     .equipe{
-        height: 50rem;
-
-        .acao{
-            h2{
-                font-size: 18px;
-            }
-            h3{
-                font-size: 15px;
-            }
-            p{
-                font-size: 10px;
-            }
-        }
+        height: 75rem;
+        
     }
-   
-       
     .cards-time{
-        .card-Web{
-            margin-left: 15%;
-            top: 415rem;
-            
-        }
+        flex-direction: column; 
+        margin-left: 30%; 
+        margin-top: 4%;
+  }
     
-        .card-Doc{
-            margin-left: 55%;
-            top: 415rem;
-
-        }
-    
-        .card-Rob{
-            margin-left: 35%;
-            top: 430rem;
-        }
-
-        .perfil{
-            width: 160px;
-            height: 212px;
-
-            .perfil__img{
-                img{
-                    height: 85px;
-                    width: 150px;
-                }
-            }
-
-            .perfil__avatar {
-                img{
-                    
-                    width: 80px;
-                    height: 80px;
-                }
-            }
-
-            .perfil__title {
-                margin-top: 74px;
-                font-size: 10px;
-            }
-            .perfil__subtitle {
-                margin-top: 2px;
-                font-size: 8px;
-            }
-
-            .perfil__btn {
-
-                img{
-                    width: 15px;
-                }
-            }
-        }
-    }
 
     .robocup{
         height: 30rem;
@@ -1380,12 +1300,6 @@ html{
             }
         }
     }
-    
-
-    .footer {
-        top:542rem;
-        width: 100%;
-    }
 
 } 
     
@@ -1436,10 +1350,29 @@ html{
         }
     }
     
+    .equipe{
+        .equipe-secoes{
+            .acao{
+                color: var(--color-bg);
+                margin-top: 10%;
 
-    .footer {
-        top:780rem;
-        width: 100%;
+                h2{
+                    margin-left: 25%;
+                }
+
+                p{
+                    margin-left: 15%;
+                
+                }
+            }
+            .cards-time{
+                display: flex;
+                flex-direction: column; /* Mude para linha */
+                gap: 5px; /* Espaço entre os cards */
+                justify-content: center; /* Centraliza os cards no contêiner */
+                margin-top: 5%; 
+            }
+        }
     }
 
 }
