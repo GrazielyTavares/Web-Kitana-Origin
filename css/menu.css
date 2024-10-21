@@ -13,6 +13,7 @@
     --color-cinzaEscuro: #1D1D1D;
     --color-cinza2: #1a1919;
     --color-fundo-arma: #34103D;
+    --color-fiap: #EE185B;
     --font-body: nunito;
 
     --color-bg: #EEEDEB;
@@ -140,10 +141,9 @@ html{
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: 60rem;
+    height: 64rem;
     background: linear-gradient(90deg, #1D1D1D 0%, #4a4da8 100%);
 }
-
 
 .projeto-section {
     display: flex;
@@ -160,22 +160,24 @@ html{
     border-radius: 10px;
     margin-left: 10%;
 
+    h2{
+        background: linear-gradient(90deg, #8FD6FF, #8A80FA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight:bold;
+        
+    }
     h3 {
         color: var(--color-white);
         margin-top: 2%;
     }
     
     p {
-        color: var(--color-borda);
-        margin-top: 2%;
+        color: var(--color-bg);
+        margin-top: 5%;
     }
 
-    img{
-        margin-top: 5%;
-        margin-left: 18%;
-        width: 30%;
-        height: 5%;
-    }
+    
 }
 
 /* Carrosel */
@@ -195,12 +197,16 @@ html{
 .perf {
     text-align: center;
     margin-top: 40px;
+
+    h2{
+        background: linear-gradient(90deg, #8F8FFF, #FF8ADC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight:bold;
+    }
 }
 
-#img1 {
-    width: 250px;
-    margin-bottom: 20px;
-}
+
 
 /* Grupo de cards */
 .group {
@@ -280,170 +286,6 @@ html{
 }
 
 
-/*Arma */
-
-.arma{
-    width: 100%;
-    height: 40rem;
-    display: flex;
-    background: linear-gradient(90deg, #155456  0%, #1D1D1D 100%);
-}
-
-.arma_texto{
-    margin-top: 10%;
-    margin-left: 15%;
-    color: var(--color-white);
-    font-size: 13px;
-    font-weight: bold;
-    
-    img{
-        width: 5%;
-        height: 9%;
-    }
-}
-
-.lista{
-    margin-top: 10%;
-    margin-left: 6%;
-   
-}
-
-.accordion-item{
-    width: 500px;
-
-    img{
-        width: 200px;
-        height: 200px;
-    }
-}
-
-/* Estilo do botão do acordeão quando fechado */
-.accordion-button {
-    background-color: #e6d1f6; 
-    color: #fff; 
-    border-radius: 90px; 
-    box-shadow: 0 4px 8px rgba(174, 98, 245, 0.5); 
-    border: none; 
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
-  }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: #d1aaf8;
-    color: #fff;
-  }
-  
-  .accordion-button:hover {
-    background-color: #b47de5; 
-    box-shadow: 0 6px 12px rgba(169, 99, 234, 0.7); 
-    transform: translateY(-5px);
-  }
-  
-  .accordion-body {
-    background-color: #d393e330; 
-    color: #5b5b5b; 
-    border-radius: 10px; /
-    
-  }
-
-  .accordion-body img {
-    max-width: 100%; 
-    border-radius: 5px; 
-  }
-  
-  .accordion-header {
-    background-color: #6a0dad;
-    border-radius: 10px;
-  }
-  
-  .accordion-collapse {
-    border-radius: 10px; 
-    overflow: hidden; 
-  }
-  
-
-#titulo_arma{
-    width: 15rem;
-    height: 10%;
-}
-
-.arma_texto{
-    p{
-        font-size: 12px;
-        color: var(--color-borda);
-        margin-top: 3%;
-        width: 80%;
-    }
-    h2{
-        font-size: 20px;
-    }
-} 
-
-
-.arma_card{
-    display: flex;
-    height: 30rem;
-    background: linear-gradient(90deg, #34103D  0%, #1D1D1D 100%);
-}
-
-#titulo_exec{
-    margin-top: 14%;
-    margin-left: 13%;
-    width: 13rem;
-    height: 8rem;
-}
-
-.videos{
-    height: 40rem;
-    background: linear-gradient(90deg, #442014  0%, #1D1D1D 100%);
-}
-
-.videos-kitana{
-    align-items: center;
-}
-
-
-
-
-
-/*footer*/
-.footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--color-cinza2);
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-}
-
-.footer h2 {
-    font-size: 1rem;
-    color: var(--color-white);
-    margin-bottom: 10px;
-}
-
-.footer img {
-    width: 100px;
-    margin-top: 10px;
-}
-
-.contato {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.contato img {
-    width: 30px;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -455,7 +297,7 @@ html{
     }
 }
 
-/*Arma */
+/*Seção Arma-Accordian */
 .alvo{
     width: 100%;
     height: 32rem;
@@ -463,36 +305,25 @@ html{
     background: linear-gradient(90deg, #1D1D1D  0%, #34103D 100%);
 }
 
-.alvo_texto{
+.alvo_texto {
     margin-top: 10%;
     margin-left: 15%;
     color: var(--color-white);
     font-size: 13px;
-    font-weight: bold;
-    
-}
-
-.alvo_texto {
-    img {
-        width: 5%;
-        height: 9%;
-    }
 
     h2{
         margin-top: 3%;
+        background: linear-gradient(90deg, #8F8FFF, #FF8ADC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight:bold;
     }
 
     p{
-        font-size: 15px;
-        color: var(--color-borda);
+        color: var(--color-bg);
         margin-top: 3%;
         width: 80%;
     }
-}
-
-#titulo_alvo{
-    width: 20rem;
-    height: 5rem
 }
 
 #alvo_desenho{
@@ -535,22 +366,11 @@ html{
     margin-left: 13%;
     width: 13rem;
     height: 8rem;
+    background: linear-gradient(90deg, #8F8FFF, #FF8ADC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:bold;
 }
-
-.loader {
-    grid-area: ativa;
-    position: absolute;
-    margin-top: 5%;
-    margin-left: 35%;
-
-    p{
-        position: absolute;
-        color: var(--color-bg);
-        margin-left:55%;
-        width: 50%;
-    }
-}
-
 .loader2 {
     grid-area: desativa;
     position: absolute;
@@ -590,6 +410,440 @@ html{
     background-image: url('../img/robo-desativado.png');
 }
 
+
+
+/*Arma */
+.arma{
+    width: 100%;
+    height: 38rem;
+    display: flex;
+    background: linear-gradient(90deg, #155456  0%, #1D1D1D 100%);
+}
+
+/* Texto arma */
+.arma_texto{
+    margin-left: 10%;
+    color: var(--color-white);
+    font-size: 13px;
+    
+    h2{
+        margin-top: 20%; 
+        background: linear-gradient(90deg, #1DCAF6, #08B066);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight:bold;
+    }
+    
+    p{
+        color: var(--color-bg);
+        margin-top: 3%;
+        width: 80%;
+    }
+}
+
+/* Estilo do botão do acordeão quando fechado */
+
+.accordion-item{
+    width: 500px;
+    background-color: transparent !important;
+    border: none !important;
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+   .custom-btn {
+    font-family: 'Arial', sans-serif !important;
+    font-size: 18px !important;
+    color: #fff !important;
+    background-color: transparent !important;
+    border: none !important;
+    text-align: left !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #ffffff33 !important;
+    transition: background-color 0.3s ease !important;
+    
+  }
+  
+  .custom-btn:after {
+    content: "v" !important;
+    font-size: 20px !important;
+    float: right !important;
+    transform: rotate(90deg) !important;
+    transition: transform 0.3s ease !important;
+    
+  }
+  
+  .custom-btn.collapsed:after {
+    transform: rotate(0deg) !important;
+  }
+  
+  .accordion-body {
+    color: #fff !important;
+    
+  }
+  
+  .accordion-body img {
+    width: 100% !important;
+    max-width: 400px !important;
+    
+  }
+  
+  .lista {
+    max-width: 600px !important;
+    margin: auto !important;
+    background-color: none !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+  }
+
+.loader {
+    grid-area: ativa;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 35%;
+
+    p{
+        position: absolute;
+        color: var(--color-bg);
+        margin-left:55%;
+        width: 50%;
+    }
+}
+
+
+/* Videos Robo */
+.videos{
+    height: 40rem;
+    background: linear-gradient(90deg, #442014  0%, #1D1D1D 100%);
+
+    .videos-kitana{
+        display: flex;
+        
+        h2{
+            font-size: 160%;
+            margin-left: 43%;
+            margin-top: 9%;
+            background: linear-gradient(90deg, #EF6060, #FF8ADC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    }
+
+    .acao-titulos{
+        display: flex;
+    
+        h3{
+            font-size: 17px;
+            width: 20%;
+            margin-left: 22%;
+            color: var(--color-bg);
+            margin-top: 8%;
+        }
+    }
+}
+
+
+/* Equipe*/
+.equipe{
+    height: 52rem;
+    background: linear-gradient(90deg, #1D1D1D  0%, #111D3E  100%);
+    display: flex;
+
+    .acao{
+        color: var(--color-bg);
+        margin-top: 20%;
+        margin-left: 10%;
+
+        h2{
+            font-size: 25px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #8FD6FF, #8A80FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+       h3{
+        margin-top: 3%;
+        font-size: 20px;
+       }
+
+       p{
+        margin-top: 3%;
+        width: 50%;
+       }
+    }
+
+}
+
+.cards-time{
+    .card-Web{
+        position: absolute;
+        top: 270rem;
+        margin-left: 50%;
+    }
+
+    .card-Doc{
+        position: absolute;
+        top: 270rem;
+        margin-left: 75%;
+    }
+
+    .card-Rob{
+        position: absolute;
+        top: 288rem;
+        margin-left: 62%;
+    }
+
+    
+    .perfil {
+        --main-color: #000;
+        --bg-color: #fff;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: relative;
+        width: 220px;
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background: var(--bg-color);
+
+        .perfil__img {
+            display: flex;
+            height: 110px;
+            width: 100%;
+    
+            img{
+                height: 100%;
+                width: 150px;
+                border-radius: 20px 0 0 0;
+            }
+    
+            #imagem-invertida{ 
+                transform: scaleX(-1);
+            }
+        }
+        
+        .perfil__avatar {
+            position: absolute;
+            width: 114px;
+            height: 114px;
+            background: var(--bg-color);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: calc(50% - 57px);
+    
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 80px;
+            }
+        }
+        
+        .perfil__title {
+            margin-top: 77px;
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--color-cinza);
+        }
+        
+        .perfil__subtitle {
+            margin-top: 4px;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--submain-color);
+        }
+        
+        .perfil__btn {
+            margin-top: 2px;
+            width: 100px;
+            height: 35px;
+            border: none;
+
+            img{
+                width: 20px;
+                margin-left: 20%;
+            }
+    
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Robocup */
+.robocup{
+    height: 50rem;
+    background: var(--color-cinzaEscuro);
+    display: flex;
+
+    .videos-robocup{
+
+        .ratio{
+            margin-top: 20%;
+            margin-left: 30%;
+            width: 400px; 
+            height:250px;
+        }
+    }
+
+    .texto-robocup{
+        flex-direction: column;
+
+        h2{
+            margin-left: 45%;
+            color: var(--color-fiap);
+            font-weight: bold;
+            margin-top: 25%;
+        }
+
+        p{
+            width: 45%;
+            margin-top: 5%;
+            margin-left: 45%;
+            color: var(--color-bg);
+        }
+    }
+}
+
+
+.contato-form{
+    height: 45rem;
+    background: #111111;
+    display: flex;
+
+    .form-contato{
+        flex-direction: column;
+        margin-left: 15%;
+        margin-top: 10%;
+
+        h2{
+            background: linear-gradient(90deg, #1DCAF6, #08B066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            margin-left: 25%;
+            width:100%;
+        }
+
+        h3{
+            margin-top: 5%;
+            color: var(--color-bg);
+            font-size: 20px;
+        }
+
+        input{
+            padding-left: 10px;
+            background-color: #2E2E2E;
+            border: var(--color-borda);
+            border-radius: 20px;
+            width: 35rem;
+            height: 3rem;
+            transition: background-color 0.3s;
+        }
+        input:focus {
+            color: #d1e7dd; 
+        }
+        input:valid {
+            color: #d1e7dd; 
+        }
+
+        button{
+            margin-top: 10%;
+            margin-left: 30%;
+            text-decoration: none;
+            border: none;
+            height: 3rem;
+            border-radius: 30px;
+            color: var(--color-bg);
+            font-weight: bold;
+            width: 10rem;
+            background: linear-gradient(90deg, #1DCAF6, #08B066);
+        }
+
+        
+    }
+    #message{
+        margin-top: 20px; 
+        color: #1DCAF6;
+    }
+    .texto-contato{
+        margin-left: 10%;
+        margin-top: 20%;
+
+        h2{
+            background: linear-gradient(90deg, #1DCAF6, #08B066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight:bold;
+        }
+        p{
+            margin-top: 5%;
+            color: var(--color-bg);
+            font-weight: bold;
+            width:80%;
+        }
+    }
+
+
+
+}
+
+
+
+/*footer*/
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--color-cinza2);
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.footer h2 {
+    font-size: 1rem;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.footer img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.contato {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contato img {
+    width: 30px;
+}
+
+
+
+
+
+/* Responsivo 110*/
 @media screen and (width < 1300px){
 
     .logo-kitana{
@@ -615,14 +869,29 @@ html{
         height: 100px; 
     }
 
+    .cards-time{
+        .card-Web{
+            top: 255rem;
+            
+        }
+    
+        .card-Doc{
+            top: 255rem;
+
+        }
+    
+        .card-Rob{
+        top: 275rem;
+        }
+    }
+
+    
+
     .footer {
         position: absolute;
-        top:205rem;
+        top:400rem;
         width: 100%;
-        display: flex;
-        flex-direction: column;
     }
-    
 }
 
 @media screen and (width < 1100px){
@@ -676,8 +945,8 @@ html{
 
    
     .arma{
-        position: absolute;
-        height: 60rem;
+        height: 50rem;
+        align-items: center;
 
         h2{
             font-size: 20px;
@@ -685,36 +954,23 @@ html{
         }
     }
 
-    .lista{
-        position: absolute;
-        top: 20rem;
-        margin-left: 20%;
-    }
-    
-    .arma_texto{
-        top: 10rem;
-        font-size: 10px;
-        font-weight: bold;
-
-        h2{
-            margin-left: 2%;
-        }
+    .arma{
+        height: 50rem;
 
         p{
-            margin-left: 2%;
+            font-size: 14px;
         }
+
+        .accordion-body{
+        font-size: 12px;
+       }
+
+       .accordion-item{
+        width: 300px;
+       }
         
-        img{
-            width: 5%;
-            height: 3%;
-        }
     }
 
-    #titulo_arma{
-            width: 25%;
-            height: 5%;
-    }
-    
     .alvo_texto {
         img {
             width: 3rem;
@@ -722,20 +978,15 @@ html{
         }
     
         h2{
-            margin-top: 3%;
-            font-size: 20px;
+            margin-top: 15%;
+            font-size: 30px;
         }
     
         p{
             font-size: 13px;
-            margin-top: 3%;
+            margin-top: 6%;
             width: 80%;
         }
-    }
-    
-    #titulo_alvo{
-        width: 18rem;
-        height: 5rem;
     }
     
     #alvo_desenho{
@@ -745,10 +996,85 @@ html{
         height: 25rem;
     }
 
+    
+    .equipe{
+        height: 40rem;
+        .acao{
+            h2{
+                font-size: 20px;
+            }
+            h3{
+                font-size: 18px;
+            }
+            p{
+                width: 40%;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+    .cards-time{
+        .card-Web{
+            margin-left: 50%;
+            top: 280rem;
+            
+        }
+    
+        .card-Doc{
+            margin-left: 75%;
+            top: 280rem;
+
+        }
+    
+        .card-Rob{
+            margin-left: 63%;
+            top: 295rem;
+        }
+
+        .perfil{
+            width: 180px;
+            height: 212px;
+
+            .perfil__img{
+                img{
+                    height: 85px;
+                    width: 150px;
+                }
+            }
+
+            .perfil__avatar {
+                img{
+                    
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            .perfil__title {
+                margin-top: 74px;
+                font-size: 10px;
+            }
+            .perfil__subtitle {
+                margin-top: 2px;
+                font-size: 8px;
+            }
+
+            .perfil__btn {
+
+                img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+   
     .footer {
-        top:235rem;
+        top:400rem;
         width: 100%;
     }
+    
 } 
 
 
@@ -831,36 +1157,6 @@ html{
         display: inline-block;
     }
 
-    .arma{
-        height: 60rem;
-        display: flex;
-    }
-
-    .lista{
-        position: absolute;
-        margin-left: 10%;
-        top: 22rem;
-    }
-
-    .accordion-item{
-        width: 20rem;
-    }
-    
-    .arma_texto{
-        p{
-            font-size: small;
-        }
-        img{
-            width: 5%;
-            height: 3%;
-        }
-    }
-
-    #titulo_arma{
-        width: 15rem;
-        height: 5%;
-    }
-
     .alvo{
         flex-direction: column;
         height: 70rem;
@@ -883,11 +1179,6 @@ html{
 
     .alvo_card{
         flex-direction: column;
-    }
-    
-    #titulo_alvo{
-        width: 18rem;
-        height: 5rem;
     }
 
     #titulo_exec{
@@ -924,8 +1215,175 @@ html{
         height: 250px;
     }
 
+    .arma{
+        flex-direction: column;
+        height: 55rem;
+    }
+
+    .lista{
+        margin-left: 10%;
+    }
+
+    .accordion-item{
+        width: 35rem;
+    }
+    
+    .arma_texto{
+        p{
+            font-size: small;
+        }
+        
+    }
+    
+
+    
+
+    .card-Web{
+        margin-left: 40%;
+        top:420rem;
+    }
+    .card-Doc{
+        margin-left: 40%;
+        top:440rem;
+    }
+    .card-Rob{
+        margin-left:40%;
+        top:460rem;
+    }
+    
+
+    .equipe{
+        height: 50rem;
+
+        .acao{
+            h2{
+                font-size: 18px;
+            }
+            h3{
+                font-size: 15px;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+   
+       
+    .cards-time{
+        .card-Web{
+            margin-left: 15%;
+            top: 415rem;
+            
+        }
+    
+        .card-Doc{
+            margin-left: 55%;
+            top: 415rem;
+
+        }
+    
+        .card-Rob{
+            margin-left: 35%;
+            top: 430rem;
+        }
+
+        .perfil{
+            width: 160px;
+            height: 212px;
+
+            .perfil__img{
+                img{
+                    height: 85px;
+                    width: 150px;
+                }
+            }
+
+            .perfil__avatar {
+                img{
+                    
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+
+            .perfil__title {
+                margin-top: 74px;
+                font-size: 10px;
+            }
+            .perfil__subtitle {
+                margin-top: 2px;
+                font-size: 8px;
+            }
+
+            .perfil__btn {
+
+                img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+    .robocup{
+        height: 30rem;
+        background: var(--color-cinzaEscuro);
+        display: flex;
+    
+        .videos-robocup{
+    
+            .ratio{
+                margin-top: 40%;
+                margin-left: 30%;
+                width: 200px; 
+                height:100px;
+            }
+        }
+    
+        .texto-robocup{
+    
+            h2{
+                margin-left: 45%;
+                font-size: 20px;
+                color: var(--color-fiap);
+                font-weight: bold;
+                margin-top: 25%;
+            }
+    
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+    .contato-form{
+        height: 65rem;
+        flex-direction: column;
+
+       
+        .texto-contato{
+            margin-top: 15%;
+            
+            h2{
+                margin-left: 35%;
+            }
+            p{
+                width: 40%;
+                margin-left: 30%;
+            }
+        }
+    }
+
+    .contato-form{
+
+        .form-contato{
+            input{
+                width: 25rem;
+            }
+        }
+    }
+    
+
     .footer {
-        top:362rem;
+        top:542rem;
         width: 100%;
     }
 
@@ -969,7 +1427,20 @@ html{
         }
     }
 
+    .contato-form{
+
+        .form-contato{
+            input{
+                width: 200px;
+            }
+        }
+    }
     
+
+    .footer {
+        top:780rem;
+        width: 100%;
+    }
 
 }
 
