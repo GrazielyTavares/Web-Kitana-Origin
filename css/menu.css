@@ -526,7 +526,7 @@ html{
         
         h2{
             font-size: 160%;
-            margin-left: 43%;
+            margin-left: 42%;
             margin-top: 9%;
             background: linear-gradient(90deg, #EF6060, #FF8ADC);
             -webkit-background-clip: text;
@@ -541,9 +541,20 @@ html{
         h3{
             font-size: 17px;
             width: 20%;
-            margin-left: 22%;
+            margin-left: 20%;
             color: var(--color-bg);
-            margin-top: 8%;
+            margin-top: 3%;
+            font-weight: bold;
+        }
+    }
+
+    .acao-videos{
+        display: flex;
+        .ratio{
+            margin-top: 3%;
+            margin-left: 13%;
+            width: 400px; 
+            height:250px;
         }
     }
 }
@@ -560,7 +571,7 @@ html{
         .acao{
             color: var(--color-bg);
             margin-top: 8%;
-            margin-left: 15%;
+            justify-content: center;
 
             h2{
                 font-size: 25px;
@@ -722,7 +733,7 @@ html{
             -webkit-text-fill-color: transparent;
             font-weight: bold;
             margin-left: 25%;
-            width:100%;
+            
         }
 
         h3{
@@ -859,19 +870,7 @@ html{
         
     .equipe{
         .equipe-secoes{
-            .acao{
-                color: var(--color-bg);
-                margin-top: 10%;
-
-                h2{
-                    margin-left: 25%;
-                }
-
-                p{
-                    margin-left: 15%;
-                
-                }
-            }
+            
             .cards-time{
                 display: flex;
                 flex-direction: row; /* Mude para linha */
@@ -879,6 +878,16 @@ html{
                 justify-content: center; /* Centraliza os cards no contêiner */
                 margin-top: 5%; 
             }
+        }
+    }
+
+    .acao-videos{
+    
+        .ratio{
+            margin-top: 40%;
+            margin-left: 30%;
+            width: 200px; 
+            height:100px;
         }
     }
 }
@@ -1025,22 +1034,7 @@ html{
     }
 
     
-    .equipe{
-        height: 40rem;
-        .acao{
-            h2{
-                font-size: 20px;
-            }
-            h3{
-                font-size: 18px;
-            }
-            p{
-                width: 40%;
-                font-size: 14px;
-            }
-        }
-    }
-
+    
 
     .equipe{
         .equipe-secoes{
@@ -1049,7 +1043,7 @@ html{
                 margin-top: 10%;
 
                 h2{
-                    margin-left: 25%;
+                    margin-left: 35%;
                 }
 
                 p{
@@ -1067,6 +1061,51 @@ html{
         }
     }
 
+    .videos-robocup{
+
+        .ratio{
+            margin-top: 40%;
+            margin-left: 35%;
+            width: 150px; 
+            height:100px;
+        }
+    }
+
+    .videos{
+    height: 56rem;
+    background: var(--color-cinzaEscuro);
+
+    .acao-titulos{
+        margin-left: 25%;
+
+        h3{
+            margin-top: 5%;
+            width: 40%;
+        }
+    }
+    .acao-videos{
+        
+        .ratio{
+            margin-left: 30%;
+            width: 350px; 
+            height:200px;
+        }
+    }
+
+    #text22{
+        position: absolute;
+        margin-top: 35%;
+        margin-left: 15%;
+    }
+    #videos22{
+    
+        position: absolute;
+        margin-top: 38%;
+        
+    }
+}
+
+    
 }
 
 
@@ -1229,19 +1268,66 @@ html{
     }
     
     .acao{
-        h2{
-            margin-top: 15%;
-        }
+        justify-content: center;
     }
     .equipe{
         height: 75rem;
-        
     }
+
+    
     .cards-time{
         flex-direction: column; 
         margin-left: 30%; 
         margin-top: 4%;
   }
+
+  .videos{
+    height: 50rem;
+    background: var(--color-cinzaEscuro);
+
+    .acao-titulos{
+        margin-left: 25%;
+
+        h3{
+            width: 40%;
+        }
+    }
+    .acao-videos{
+        
+        .ratio{
+            margin-left: 30%;
+            width: 350px; 
+            height:200px;
+        }
+    }
+
+    #text22{
+        position: absolute;
+        margin-top: 45%;
+    }
+    #videos22{
+    
+        position: absolute;
+        margin-top: 45%;
+        
+    }
+}
+
+    .texto-robocup{
+
+        h2{
+            margin-left: 45%;
+            font-size: 20px;
+            color: var(--color-fiap);
+            font-weight: bold;
+            margin-top: 25%;
+        }
+
+        p{
+            font-size: 10px;
+        }
+    }
+
     
 
     .robocup{
@@ -1296,7 +1382,7 @@ html{
 
         .form-contato{
             input{
-                width: 25rem;
+                width: 20rem;
             }
         }
     }
@@ -1353,17 +1439,7 @@ html{
     .equipe{
         .equipe-secoes{
             .acao{
-                color: var(--color-bg);
-                margin-top: 10%;
-
-                h2{
-                    margin-left: 25%;
-                }
-
-                p{
-                    margin-left: 15%;
-                
-                }
+                justify-content: center;
             }
             .cards-time{
                 display: flex;
