@@ -12,8 +12,7 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="../css/menu.css">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
@@ -29,11 +28,13 @@
   <header>
     <nav class="navegador">
       <ul>
-        <li><a href="#descProjetos">Projeto</a></li>
-        <li><a href="#descPerfomance">Performance</a></li>
-        <li><a href="#alvo_desenho">Ataque</a></li>
-        <li><a href="#titulo_exec">Execução</a></li>
-        <li><a href="#titulo_alvo">Funcionamento</a></li>
+        <li><a href="#carouselExampleDark">Projeto</a></li>
+        <li><a href="#text-direction">Ataque</a></li>
+        <li><a href="#func-text-direction">Funcionamento</a></li>
+        <li><a href="#lyrics">Kitana em Ação</a></li>
+        <li><a href="#equip-text-direction">Equipe</a></li>
+        <li><a href="#robocup-text-direction">Robocup</a></li>
+        <li><a href="#form-contato">Contato</a></li>
         <a href="https://github.com/GrazielyTavares/WebKitanaOrigin/tree/main" target="_blank">
           <img class="img1" src="../img/github.png" alt="icone de github">
         </a>
@@ -59,11 +60,11 @@
       <div class="projeto-robo">
         <h2>PROJETO</h2>
         <h3>Robô Kitana: Robô de batalha com um Leque de arma</h3>
-        <p><strong>O desenvolvimento do robô RF20 começou em março de 2024, com a equipe projetando e construindo sua
+        <p>O desenvolvimento do robô RF20 começou em março de 2024, com a equipe projetando e construindo sua
             estrutura em MDF. O controle eletrônico foi integrado com Arduino e um módulo Bluetooth para permitir o
             controle via celular. A equipe documentou cada etapa com fotografias e assinaturas, realizando reuniões e
             testes em sala de aula e laboratórios da FIAP. O projeto evoluiu de forma colaborativa e foi concluído em
-            setembro de 2024, atendendo aos requisitos propostos.</strong></p>
+            setembro de 2024, atendendo aos requisitos propostos.</p>
       </div>
 
       <!-- carrosel -->
@@ -155,8 +156,8 @@
     <img src="../img/arma_desenho.png" id="alvo_desenho" alt="Desenho arma">
 
     <div class="alvo_texto">
-      <h2><strong>Ataque</strong> </h2>
-      <p>A estrutura da arma é feita de isopor e apresenta um mecanismo de disparo com agulhas e uma haste de palitos de
+      <h2>ATAQUE</h2>
+      <p id="text-direction">A estrutura da arma é feita de isopor e apresenta um mecanismo de disparo com agulhas e uma haste de palitos de
         churrasco. Controlada por um Arduino, a arma se eleva verticalmente quando ativada e retorna à configuração
         fechada quando desativada, otimizando o espaço e garantindo segurança. O design ofensivo da arma é inspirado em
         um leque, com agulhas em suas pontas, proporcionando maior alcance para acertar o alvo.</p>
@@ -176,11 +177,22 @@
   </section>
 
   <section class="arma">
+
+    <div class="arma_texto">
+      <h2 id="func-text-direction">EM FUNCIONAMENTO</h2>
+      <p >O robô é alimentado por um pack de baterias na base, que comporta até 8 pilhas AA. A mobilidade é garantida por
+        dois motores com rodas de borracha, controlados pelo Arduino, que proporciona precisão e eficiência na
+        movimentação. A defesa do robô é composta por uma arma feita de isopor com agulhas, montada sobre uma haste de
+        palitos de churrasco. Quando ativada, a arma se eleva verticalmente da base para sua posição operacional e
+        retorna à posição fechada quando desativada. O design inspirado em um leque aumenta seu alcance defensivo,
+        proporcionando uma capacidade eficaz de atacar alvos.</p>
+    </div>
+
     <div class="lista">
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button collapsed custom-btn" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
               Arma
             </button>
@@ -198,14 +210,14 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button collapsed custom-btn" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
               Base
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              <h5><strong>Estrutura arma</strong></h5>
+              <h5><strong>Estrutura base</strong></h5>
               A base do robô é a estrutura principal que sustenta o Arduino, motores, rodas e sensores. O Arduino
               controla todos os componentes eletrônicos, como motores e sensores, com base na programação. A base é
               feita de materiais resistentes e organiza a fiação e a fonte de energia, garantindo a estabilidade e o
@@ -217,7 +229,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button collapsed custom-btn" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
               Designer
             </button>
@@ -233,83 +245,144 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Ajustar de acordo com id -->
-    <div class="arma_texto">
-      <h2 id="titulo_alvo">EM FUNCIONAMENTO</h2>
-      <p>O robô é alimentado por um pack de baterias na base, que comporta até 8 pilhas AA. A mobilidade é garantida por
-        dois motores com rodas de borracha, controlados pelo Arduino, que proporciona precisão e eficiência na
-        movimentação. A defesa do robô é composta por uma arma feita de isopor com agulhas, montada sobre uma haste de
-        palitos de churrasco. Quando ativada, a arma se eleva verticalmente da base para sua posição operacional e
-        retorna à posição fechada quando desativada. O design inspirado em um leque aumenta seu alcance defensivo,
-        proporcionando uma capacidade eficaz de atacar alvos..</p>
-    </div>
+    </div>    
   </section>
 
   <!-- Videos -->
-  <section class="videos">
+  <section class="videos" id="lyrics">
     <div class="videos-kitana">
       <h2>Kitana em Ação</h2>
-      <div class="acao">
+    </div>
+      <div class="acao-titulos">
         <h3>Construção e Movimento</h3>
-        <Random></Random>
-        <h3>Montagem e Controle na Palma da Mão</h3>
-        <Random></Random>
+        <h3>Controle na Palma da Mão</h3>
       </div>
-    </div>
-    </div>
+      <div class="acao-videos">
+        <div class="ratio ratio-4x3">
+          <iframe src="" title="YouTube video" allowfullscreen></iframe>
+        </div>
+        
+        <div class="ratio ratio-4x3">
+          <iframe src="" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
   </section>
 
   <!-- Equipe -->
-  <section class="equipe">
+  <section class="equipe" >
     <div class="equipe-secoes">
-      <div class="acao">
+      
+ 
+      <div class="acao" id="equip-text-direction">
         <h2>Equipe Kombatentes</h2>
         <h3>Nossa Equipe</h3>
-        <p>Este projeto foi desenvolvido por uma equipe multidisciplinar, unindo expertise em diferentes áreas para
-          trazer o melhor resultado:</p>
+        <p>Este projeto foi desenvolvido por uma equipe multidisciplinar, unindo expertise em diferentes áreas para trazer o melhor resultado:</p>
       </div>
       <div class="cards-time">
-        <!-- cards -->
+        <!-- perfil utilizando svg -->
+
+        <div class="card-Web">
+        <div class="perfil">
+            <div class="perfil__img"><img src="../img/fundo-Grazi.png"><img id="imagem-invertida" src="../img/fundo-Grazi.png"> </div>
+            <div class="perfil__avatar"><img src="../img//perfil-Grazi.jpeg"></div>
+            <div class="perfil__title">Graziely Tavares</div>
+            <div class="perfil__subtitle">Web e Designer</div>
+            <div class="perfil__wrapper">
+              <div class="perfil__btn">
+              <a href="https://github.com/GrazielyTavares" target="_blank">
+                <img src="../img/github-preto.png" alt="Ícone do GitHub">
+              </a>
+              <a href="https://www.linkedin.com/in/graziely-tavares-094007231" target="_blank">
+                <img src="../img/logotipo-do-linkedin.png" alt="Ícone do Linkedin">
+              </a>
+            </div>
+        </div>
       </div>
     </div>
+
+    <div class="card-Doc">
+      <div class="perfil">
+          <div class="perfil__img"><img src="../img/fundo-okuma.png"><img id="imagem-invertida" src="../img/fundo-okuma.png"> </div>
+          <div class="perfil__avatar"><img src="../img/perfil-okuma.png"></div>
+          <div class="perfil__title">Samuel Okuma</div>
+          <div class="perfil__subtitle">Hardware</div>
+          <div class="perfil__wrapper">
+            <div class="perfil__btn">
+            <a href="https://github.com/okumajj" target="_blank">
+              <img src="../img/github-preto.png" alt="Ícone do GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/samuel-okuma/" target="_blank">
+              <img src="../img/logotipo-do-linkedin.png" alt="Ícone do Linkedin">
+            </a>
+          </div>
+      </div>
     </div>
+  </div>
+
+  <div class="card-Rob">
+    <div class="perfil">
+        <div class="perfil__img"><img src="../img/fundo-arthur.png"><img id="imagem-invertida" src="../img/fundo-arthur.png"> </div>
+        <div class="perfil__avatar"><img src="../img/perfil-Arthurr.png"></div>
+        <div class="perfil__title">Arthur Arruda</div>
+        <div class="perfil__subtitle">Documentação</div>
+        <div class="perfil__wrapper">
+          <div class="perfil__btn">
+          <a href="https://github.com/turz1n" target="_blank">
+            <img src="../img/github-preto.png" alt="Ícone do GitHub">
+          </a>
+          <a href="" target="_blank">
+            <img src="../img/logotipo-do-linkedin.png" alt="Ícone do Linkedin">
+          </a>
+        </div>
+    </div>
+  </div>
+</div>
     </div>
   </section>
 
   <!-- Robocup -->
-  <section class="robocup">
+  <section class="robocup"  >
     <div class="videos-robocup">
-      <Random></Random>
-      <Random></Random>
+      <div class="ratio ratio-16x9" id="robocup-text-direction">
+        <iframe src="https://www.youtube.com/embed/UKcEUDlnX9Q?si=MrZy4ab2VRHwIY2N&amp;start=3" title="YouTube video player" allowfullscreen></iframe>
+      </div>
+      
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/7Ggx_UsW17o?si=3QBGgZq9SeW7fQex&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
-
+   
     <div class="texto-robocup">
       <h2>ROBOCUP FIAP 2024</h2>
       <p>A Robocup é a competição instituição de Ensino Superior FIAP. Alunos dos 1°s anos de Sistemas de Informação
         constroem robôs para participar de duelos, onde o principal objetivo é estourar o balão que o adversário
-        carrega. Para isso, todas as máquinas possuem armas em seu corpo.</p>
+        carrega. Sendo realizada no evento Next realizado pela instituição FIAP</p>
     </div>
   </section>
 
     <!-- Contato -->
-    <section class="contato">
-      <div class="form-contato">
-        <h2>Entre em Contato!</h2>
-        <h3>Nome</h3>
-        <input>
-        <h3>Email</h3>
-        <input>
-        <h3>Telefone</h3>
-        <input>
-        <button>Enviar</button>
-      </div>
+    <section class="contato-form">
+      <form id="form-contato"> 
+        <div class="form-contato">
+            <h2>Entre em Contato!</h2>
+            <h3>Nome</h3>
+            <input placeholder="Nome Sobrenome" id="name2" required>
+            <h3>Email</h3>
+            <input type="email" placeholder="email@gmail.com" id="email2" required>
+            <h3>Telefone</h3>
+            <input type="tel" placeholder="(DD)90000-0000" id="phone" required>
+            <button type="submit">Enviar</button>
+            <div id="message"></div>
+        </div>
+    </form>
   
       <div class="texto-contato">
         <h2>Fale Conosco</h2>
-        <p>Tem alguma dúvida ou sugestão? Preencha o formulário e entraremos em contato rapidamente.</p>
+        <p>Tem alguma dúvida ou sugestão?</p> 
+         <p>Preencha o formulário e entraremos em contato rapidamente.</p>
       </div>
+
+     
     </section>
 
   <footer class="footer">
@@ -330,5 +403,21 @@
     </div>
   </footer>
 
+  <!--Js para apagar os campos do form-->
+  <script>
+    document.getElementById('form-contato').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        const name = document.getElementById('name2').value;
+        const email = document.getElementById('email2').value;
+        const phone = document.getElementById('phone').value;
+
+        const messageDiv = document.getElementById('message');
+        messageDiv.textContent = 'Informações enviadas!';
+        messageDiv.style.color = '1DCAF6';
+
+        this.reset();
+    });
+</script>
 </body>
 </html>
