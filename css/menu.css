@@ -1457,7 +1457,8 @@ html{
 
     .galeria{
         position: absolute;
-        margin-top: 90%;
+        margin-top: 95%;
+        left: 15%;
         width: 200px;
         height: 250px;
    
@@ -1481,9 +1482,13 @@ html{
     }
 
     .alvo {
-        height: 20rem;
+        height: 40rem;
         
 
+    }
+
+    #titulo_exec{
+        top:171rem;
     }
 
     #alvo_desenho{
@@ -1493,18 +1498,52 @@ html{
         width: 20rem;
         height: 20rem;
     }
+
     .alvo_texto{
         p{
             font-size: 10px;
         }
     }
 
+    .loader{
+        top:170rem;
+        left: 1px;
+    }
+
+    .loader2{
+        top:185rem;
+        left: 1px;
+    }
+
+    .armaAtivada{
+        width: 180px;
+        height: 200px;
+    }
+
+    .armaDesativada{
+        width: 180px;
+        height: 170px;
+    }
+
+    #text22{
+        top:288rem;
+        width: 70%;
+    }
+
+
     .contato-form{
 
         .form-contato{
             input{
-                width: 200px;
+                width: 15rem;
             }
+        }
+    }
+
+    .acao-videos{
+        iframe{
+            width: 250px;
+            height: 150px;
         }
     }
     
