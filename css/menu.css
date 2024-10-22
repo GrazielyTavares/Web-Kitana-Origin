@@ -1071,39 +1071,39 @@ html{
         }
     }
 
-    .videos{
-    height: 56rem;
-    background: var(--color-cinzaEscuro);
-
-    .acao-titulos{
-        margin-left: 25%;
-
-        h3{
-            margin-top: 5%;
-            width: 40%;
-        }
-    }
-    .acao-videos{
-        
-        .ratio{
-            margin-left: 30%;
-            width: 350px; 
-            height:200px;
-        }
-    }
-
-    #text22{
-        position: absolute;
-        margin-top: 35%;
-        margin-left: 15%;
-    }
-    #videos22{
+    /* .videos{
+        height: 56rem;
+        background: var(--color-cinzaEscuro);
     
-        position: absolute;
-        margin-top: 38%;
+        .acao-titulos{
+            margin-left: 25%;
+    
+            h3{
+                margin-top: 5%;
+                width: 40%;
+            }
+        }
+        .acao-videos{
+            
+            .ratio{
+                margin-left: 30%;
+                width: 350px; 
+                height:200px;
+            }
+        }
+    
+        #text22{
+            position: absolute;
+            margin-top: 35%;
+            margin-left: 15%;
+        }
+        #videos22{
         
-    }
-}
+            position: absolute;
+            margin-top: 38%;
+            
+        }
+    } */
 
     
 }
@@ -1116,9 +1116,8 @@ html{
     }
 
     .robo{
-        
         width: 100%;
-        height:50rem;
+        height:30rem;
     }
 
     .logo-kitana{
@@ -1128,42 +1127,45 @@ html{
 
     .projeto{
         padding: 20px;
-        height: 150rem;
+        height: 130rem;
     }
 
     .projeto-section{
         margin-right: 15%;
         flex-direction: column; 
-        align-items: flex-start; 
     }
 
     .projeto-robo {
         margin-top: 20%;
+
+        h2{
+            margin-left: 10%;
+        }
         h3 {
             margin-top: 3%;
+            margin-left: 10%;
             font-size: 18px;
-            width: 90%;
         }
         
         p {
+            margin-left: 10%;
             margin-top: 3%;
             font-size: 14px;
-            width: 85%;
-        }
-    
-        img{
-            width: 40%;
-            height: 20%;
+            width: 95%;
         }
     }
 
     .perf {
-        margin-top: 15%;
+       
+        h2{
+            margin-top: 25rem
+        }
     }
 
     .galeria{
-        margin-top: 0;
-        margin-left: 20%;
+        position: absolute;
+        margin-top: 115%;
+        margin-left: 10%;
         width: 350px;
         height: 350px;
     }
@@ -1180,9 +1182,11 @@ html{
         justify-content: center;
         gap: 2rem;
         max-width: 100%; 
+        margin-top: 5%;
     }
     
     .carde {
+        
         width: 300px;
         height: 320px;
         perspective: 1000px;
@@ -1191,15 +1195,17 @@ html{
 
     .alvo{
         flex-direction: column;
-        height: 70rem;
-        
+        height: 60rem;
+        margin-left: 1px;
     }
 
     #alvo_desenho{
         position: absolute;
-        top: 220rem;
+        top: 182rem;
         width: 20rem;
         height: 20rem;
+        margin-left: 1px;
+    
     }
 
     .alvo_texto {
@@ -1210,21 +1216,22 @@ html{
     }
 
     .alvo_card{
+        height: 30rem;
         flex-direction: column;
     }
 
     #titulo_exec{
         position: absolute;
         margin-left: 30%;
-        top: 245rem;
+        top: 205rem;
         width: 200px;
         height: 100px; 
     }
     
     .loader{
         position: absolute;
-        top:253rem;
-        margin-left: 14%;
+        top:205rem;
+        margin-left: 1px;
 
         p{
             width: 50%;
@@ -1232,19 +1239,20 @@ html{
     }
 
     .armaAtivada{
-        width: 250px;
-        height: 250px;
+        width: 230px;
+        height: 220px;
+
     }
 
     .loader2{
         position: absolute;
-        top:275rem;
-        margin-left: 10%;
+        top:225rem;
+        margin-left: 1px;
     }
 
     .armaDesativada{
-        width: 250px;
-        height: 250px;
+        width: 210px;
+        height: 200px;
     }
 
     .arma{
@@ -1262,13 +1270,18 @@ html{
     
     .arma_texto{
         p{
-            font-size: small;
+            font-size: 10px;
         }
         
     }
     
     .acao{
-        justify-content: center;
+        justify-content: center;  
+    }
+
+    #ajuste{
+        margin-top: 15%;
+        margin-left: 15%;
     }
     .equipe{
         height: 75rem;
@@ -1277,41 +1290,39 @@ html{
     
     .cards-time{
         flex-direction: column; 
-        margin-left: 30%; 
+        margin-left: 22%; 
         margin-top: 4%;
-  }
+    } 
+
+    #ajuste2{
+        margin-left:25%;
+        margin-top: 20%;
+    }
 
   .videos{
     height: 50rem;
-    background: var(--color-cinzaEscuro);
+  }
 
-    .acao-titulos{
-        margin-left: 25%;
+  #text22{
+    position: absolute;
+    width:55%;
+    top:310rem;
+  }
 
-        h3{
-            width: 40%;
+  #text33{
+    width:55%;
+  }
+
+  .acao-videos{
+        flex-direction: column;
+        gap: 5rem;
+        margin-top: 10%;
+        
+        iframe{
+            width: 18rem;
+            height: 12rem;
         }
     }
-    .acao-videos{
-        
-        .ratio{
-            margin-left: 30%;
-            width: 350px; 
-            height:200px;
-        }
-    }
-
-    #text22{
-        position: absolute;
-        margin-top: 45%;
-    }
-    #videos22{
-    
-        position: absolute;
-        margin-top: 45%;
-        
-    }
-}
 
     .texto-robocup{
 
@@ -1331,37 +1342,40 @@ html{
     
 
     .robocup{
-        height: 30rem;
+        flex-direction: column;
+        height: 45rem;
         background: var(--color-cinzaEscuro);
-        display: flex;
-    
-        .videos-robocup{
-    
-            .ratio{
-                margin-top: 40%;
-                margin-left: 30%;
-                width: 200px; 
-                height:100px;
-            }
-        }
     
         .texto-robocup{
-    
+            position: absolute;
             h2{
-                margin-left: 45%;
-                font-size: 20px;
-                color: var(--color-fiap);
-                font-weight: bold;
-                margin-top: 25%;
-            }
+                top: 300rem;
+                margin-left: 25%;
     
+            }
             p{
                 font-size: 10px;
+                margin-left: 25%;
+                width: 60%;
             }
         }
+
+        .videos-robocup{
+            margin-top: 50%;
+            .ratio{
+                
+                margin-left: 25%;
+                width: 200px; 
+                height:150px;
+            }
+        }
+    
+        
     }
+
+    
     .contato-form{
-        height: 65rem;
+        height: 60rem;
         flex-direction: column;
 
        
@@ -1369,20 +1383,26 @@ html{
             margin-top: 15%;
             
             h2{
-                margin-left: 35%;
+                margin-left: 1%;
             }
             p{
-                width: 40%;
-                margin-left: 30%;
+                width: 60%;
+                margin-left: 2%;
             }
         }
-    }
-
-    .contato-form{
 
         .form-contato{
+            h2{
+                margin-top: 8rem;
+                margin-left: 2px;
+            }
+
             input{
-                width: 20rem;
+                width: 15rem;
+            }
+
+            button{
+                margin-left:10px;
             }
         }
     }
@@ -1390,11 +1410,14 @@ html{
 } 
     
 
-@media screen and (width < 200px){
+@media screen and (width < 400px){
 
+   .navegador{
+    height: 4rem;
+   }
     .robo{
         width: 100%;
-        height: 100vh;
+        height: 30rem;
     }
 
     .logo-kitana{
@@ -1402,17 +1425,28 @@ html{
         height: 50%;
     }
 
+    .projeto{
+        height: 100rem; 
+    }
+    
     .projeto-robo {
+
+        h2{
+            margin-left: 5%;
+        }
         h3 {
-            margin-top: 3%;
+            margin-top:3%;
+            margin-left: 5%;
             font-size: small;
             width: 80%;
+            font-weight: bold;
         }
         
         p {
             margin-top: 5%;
+            margin-left: 5%;
             font-size: x-small;
-            width: 80%;
+            width: 90%;
         }
     
         img{
@@ -1421,6 +1455,44 @@ html{
         }
     }
 
+    .galeria{
+        position: absolute;
+        margin-top: 90%;
+        width: 200px;
+        height: 250px;
+   
+    }
+    
+    .carousel img{
+        width: 200px;
+        height: 250px;
+    }
+
+    .perf{
+        h2{
+            margin-top:85%;
+        }
+    }
+
+    .carde {
+        margin-top: 10%;
+        width: 250px;
+        height: 225px;
+    }
+
+    .alvo {
+        height: 20rem;
+        
+
+    }
+
+    #alvo_desenho{
+        position: absolute;
+        top: 150rem;
+        left: 20px;
+        width: 20rem;
+        height: 20rem;
+    }
     .alvo_texto{
         p{
             font-size: 10px;
