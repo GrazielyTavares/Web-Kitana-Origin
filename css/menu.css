@@ -842,7 +842,7 @@ html{
 
 
 /* Responsivo 110*/
-@media screen and (width < 1300px){
+@media screen and (width < 1400px){
 
     .logo-kitana{
         width: 40%;
@@ -861,12 +861,6 @@ html{
         width: 200px;
         height: 200px; 
     }
-
-    #titulo_exec{
-        width: 200px;
-        height: 100px; 
-    }
-
         
     .equipe{
         .equipe-secoes{
@@ -893,7 +887,7 @@ html{
 }
 
 
-@media screen and (width < 1100px){
+@media screen and (width < 1000px){
 
     *{
         h3{
@@ -908,8 +902,13 @@ html{
     .projeto-robo {
         width: 90%;
 
+        h3{
+            width: 260%;
+        }
+
         p {
             font-size: 13px;
+            width: 190%;
         }
     
         img{
@@ -987,6 +986,20 @@ html{
             width: 80%;
         }
     }
+
+    #titulo_exec{
+        margin-top: 20%;
+    }
+    .armaAtivada{
+        width: 170px;
+        height: 150px;
+
+    }
+
+    .armaDesativada{
+        width: 170px;
+        height: 150px;
+    }
     
     #alvo_desenho{
         margin-top: 10%;
@@ -1061,52 +1074,53 @@ html{
         }
     }
 
-    .videos-robocup{
-
-        .ratio{
-            margin-top: 40%;
-            margin-left: 35%;
-            width: 150px; 
-            height:100px;
+    .acao-titulos{
+        margin-top: 5%;
+    }
+    .acao-videos{
+        margin-top: 5%;
+        
+        iframe{
+            width: 15rem;
+            height: 12rem;
         }
     }
 
-    /* .videos{
-        height: 56rem;
-        background: var(--color-cinzaEscuro);
+    .robocup{
+        height: 50rem;
     
-        .acao-titulos{
-            margin-left: 25%;
+        .texto-robocup{
+            position: absolute;
+            h2{
+                margin-left: 25%;
     
-            h3{
-                margin-top: 5%;
-                width: 40%;
+            }
+            p{
+                font-size: 14px;
+                margin-left: 25%;
+                width: 60%;
             }
         }
-        .acao-videos{
-            
-            .ratio{
-                margin-left: 30%;
-                width: 350px; 
-                height:200px;
-            }
-        }
-    
-        #text22{
-            position: absolute;
-            margin-top: 35%;
-            margin-left: 15%;
-        }
-        #videos22{
-        
-            position: absolute;
-            margin-top: 38%;
-            
-        }
-    } */
 
-    
+        .videos-robocup{
+            display: flex;
+            gap: 3rem;
+            margin-top: 40%;
+
+            .ratio{
+                width: 250px; 
+            }
+
+            iframe{
+                width: 250px;
+            }
+        }
+    }
+   
+
+   
 }
+
 
 
 
@@ -1343,7 +1357,7 @@ html{
 
     .robocup{
         flex-direction: column;
-        height: 45rem;
+        height: 50rem;
         background: var(--color-cinzaEscuro);
     
         .texto-robocup{
@@ -1361,6 +1375,7 @@ html{
         }
 
         .videos-robocup{
+            flex-direction: column;
             margin-top: 50%;
             .ratio{
                 
@@ -1483,8 +1498,6 @@ html{
 
     .alvo {
         height: 40rem;
-        
-
     }
 
     #titulo_exec{
@@ -1529,7 +1542,6 @@ html{
         top:288rem;
         width: 70%;
     }
-
 
     .contato-form{
 
